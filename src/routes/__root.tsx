@@ -77,14 +77,55 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "An Illustrated Wedding Invitation" },
+      { title: "Asritaa & Suhas Reddy — Royal Wedding Invitation" },
       {
         name: "description",
-        content: "A hand-painted, animated Indian wedding storybook invitation.",
+        content:
+          "Together with our families, Asritaa & Suhas Reddy invite you to celebrate their wedding on 10 & 11 October 2026 in Visakhapatnam.",
       },
       { name: "theme-color", content: "#fdf8ef" },
+      { property: "og:site_name", content: "Asritaa & Suhas Reddy Wedding" },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://asritaa-weds-suhasreddy.vercel.app/" },
+      {
+        property: "og:title",
+        content: "Asritaa & Suhas Reddy — Royal Wedding Invitation",
+      },
+      {
+        property: "og:description",
+        content:
+          "Together with our families, Asritaa & Suhas Reddy invite you to celebrate their wedding on 10 & 11 October 2026 in Visakhapatnam.",
+      },
+      {
+        property: "og:image",
+        content: "https://asritaa-weds-suhasreddy.vercel.app/og-image.jpg",
+      },
+      {
+        property: "og:image:secure_url",
+        content: "https://asritaa-weds-suhasreddy.vercel.app/og-image.jpg",
+      },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "576" },
+      {
+        property: "og:image:alt",
+        content: "Wedding Invitation of Asritaa & Suhas Reddy",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:url", content: "https://asritaa-weds-suhasreddy.vercel.app/" },
+      {
+        name: "twitter:title",
+        content: "Asritaa & Suhas Reddy — Royal Wedding Invitation",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Together with our families, Asritaa & Suhas Reddy invite you to celebrate their wedding on 10 & 11 October 2026 in Visakhapatnam.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://asritaa-weds-suhasreddy.vercel.app/og-image.jpg",
+      },
     ],
     links: [
       {
@@ -98,6 +139,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@300;400;600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "canonical", href: "https://asritaa-weds-suhasreddy.vercel.app/" },
+      {
+        rel: "image_src",
+        href: "https://asritaa-weds-suhasreddy.vercel.app/og-image.jpg",
+      },
     ],
   }),
 

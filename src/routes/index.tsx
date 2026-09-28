@@ -10,20 +10,23 @@ import { Footer } from "@/components/invitation/Footer";
 import { MusicPlayer } from "@/components/invitation/MusicPlayer";
 import { invitation } from "@/content/invitation";
 
-const siteUrl = "https://asritaa-suhasreddy.inviteby.top";
+const siteUrl = "https://asritaa-weds-suhasreddy.vercel.app";
 const title = `${invitation.couple.bride} & ${invitation.couple.groom} — Royal Wedding Invitation`;
 const description = `Together with our families, Asritaa & Suhas Reddy invite you to celebrate their wedding on ${invitation.dateLabel} in Visakhapatnam.`;
 const ogImageUrl = `${siteUrl}/og-image.jpg`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    links: [{ rel: "canonical", href: siteUrl }],
+    links: [
+      { rel: "canonical", href: `${siteUrl}/` },
+      { rel: "image_src", href: ogImageUrl },
+    ],
     meta: [
       { title },
       { name: "description", content: description },
-      { property: "og:site_name", content: "InviteStory" },
+      { property: "og:site_name", content: "Asritaa & Suhas Reddy Wedding" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: siteUrl },
+      { property: "og:url", content: `${siteUrl}/` },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:image", content: ogImageUrl },
@@ -36,6 +39,7 @@ export const Route = createFileRoute("/")({
         content: `Wedding Invitation of ${invitation.couple.bride} & ${invitation.couple.groom}`,
       },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:url", content: `${siteUrl}/` },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: ogImageUrl },
