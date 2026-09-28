@@ -10,24 +10,27 @@ import { Footer } from "@/components/invitation/Footer";
 import { MusicPlayer } from "@/components/invitation/MusicPlayer";
 import { invitation } from "@/content/invitation";
 
-const title = `${invitation.couple.bride} & ${invitation.couple.groom} — Royal Illustrated Wedding Invitation`;
+const siteUrl = "https://asritaa-suhasreddy.inviteby.top";
+const title = `${invitation.couple.bride} & ${invitation.couple.groom} — Royal Wedding Invitation`;
 const description = `Together with our families, Asritaa & Suhas Reddy invite you to celebrate their wedding on ${invitation.dateLabel} in Visakhapatnam.`;
-const ogImage = "/og-image.jpg";
+const ogImageUrl = `${siteUrl}/og-image.jpg`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [{ rel: "canonical", href: siteUrl }],
     meta: [
       { title },
       { name: "description", content: description },
       { property: "og:site_name", content: "InviteStory" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: siteUrl },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: ogImage },
-      { property: "og:image:secure_url", content: ogImage },
+      { property: "og:image", content: ogImageUrl },
+      { property: "og:image:secure_url", content: ogImageUrl },
       { property: "og:image:type", content: "image/jpeg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "576" },
       {
         property: "og:image:alt",
         content: `Wedding Invitation of ${invitation.couple.bride} & ${invitation.couple.groom}`,
@@ -35,7 +38,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
-      { name: "twitter:image", content: ogImage },
+      { name: "twitter:image", content: ogImageUrl },
     ],
   }),
   component: Index,
